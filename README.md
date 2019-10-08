@@ -1,8 +1,9 @@
 # Abetter
 TwitterをスクレイピングしてLSTMに学習させた発言をランダムに生成するウェブアプリ
 
-環境：Docker
-Python3.6
+環境：
+*Docker
+*Python3.6
 PyTorch
 Flask
 
