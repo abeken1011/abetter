@@ -36,7 +36,7 @@ def make_wakati(sentence):
 
 def sentence2index(sentences):
   wakati = make_wakati(sentences)
-  with open("w2i.pkl", "rb")as data:
+  with open("data/w2i.pkl", "rb")as data:
     word2index = pickle.load(data)
   id_stc = [word2index[i] for i in make_wakati(sentences)]
   return id_stc
@@ -62,7 +62,7 @@ def generate_seq(net, start_phase="eスポーツを盛り上げる", length=200,
     out_dist=o.view(-1).exp()
     top_i=torch.multinomial(out_dist, 1)[0]
     result.append(top_i)
-  with open("i2w.pkl", "rb")as data:
+  with open("data/i2w.pkl", "rb")as data:
     index2word = pickle.load(data)
   res = "".join([index2word[int(i.to("cpu").numpy())] for i in result])
   return start_phase+ res

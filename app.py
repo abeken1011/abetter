@@ -12,7 +12,7 @@ def index():
 
 @app.route("/", methods=["POST"])
 def form():
-    with open('model.pkl', 'rb') as f:
+    with open('data/model.pkl', 'rb') as f:
         model = cloudpickle.load(f)
     field=request.form["field"]
     maked_words = LSTM_model.generate_seq(model, start_phase=field, length=20)
