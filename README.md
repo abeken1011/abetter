@@ -23,3 +23,13 @@ TwitterをスクレイピングしてLSTMに学習させた発言をランダム
 
 あとはご自由にお楽しみください。
 モデルの精度は今後LSTM以外を使ったりして改善していく予定です。
+
+## 参考記事
+モデルの読み込み
+https://qiita.com/derodero24/items/f4cc46f144f404054501
+
+Flaskで自然言語処理アプリの作成
+https://qiita.com/oreyutarover/items/909d614ca3b48d2c9e16
+
+ポート開放でハマった所の解決策
+https://stackoverflow.com/questions/30323224/deploying-a-minimal-flask-app-in-docker-server-connection-issues
